@@ -1,19 +1,23 @@
 const Footer = () => {
-  const navLinks = [
-    { href: "#expertise", label: "Expertise" },
-    { href: "#partners", label: "Partners" },
-    { href: "#contact", label: "Contact" },
-  ];
-
+  const navLinks = [{
+    href: "#expertise",
+    label: "Expertise"
+  }, {
+    href: "#partners",
+    label: "Partners"
+  }, {
+    href: "#contact",
+    label: "Contact"
+  }];
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <footer className="bg-primary text-primary-foreground py-12">
+  return <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}
@@ -25,15 +29,9 @@ const Footer = () => {
           
           {/* Footer Navigation */}
           <nav className="flex space-x-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollToSection(link.href)}
-                className="text-sm opacity-90 hover:opacity-100 transition-opacity"
-              >
+            {navLinks.map(link => <button key={link.href} onClick={() => scrollToSection(link.href)} className="opacity-90 hover:opacity-100 transition-opacity text-sm">
                 {link.label}
-              </button>
-            ))}
+              </button>)}
           </nav>
         </div>
         
@@ -45,8 +43,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
