@@ -3,7 +3,7 @@ const Partners = () => {
     {
       title: "HV Cables",
       companies: [
-        { name: "Iljin", website: "http://www.iljinelectric.com/eng/main.jsp" }
+        { name: "Iljin Electric", website: "http://www.iljinelectric.com/eng/main.jsp" }
       ]
     },
     {
@@ -20,6 +20,24 @@ const Partners = () => {
         { name: "S&C Electric Co", website: "http://www.sandc.com/" },
         { name: "Hitzinger", website: "http://www.hitzinger.at/en" }
       ]
+    },
+    {
+      title: "Energy Storage",
+      companies: [
+        { name: "S&C Electric Co", website: "http://www.sandc.com/" }
+      ]
+    },
+    {
+      title: "Transmission & Distribution Hardware",
+      companies: [
+        { name: "Jiangsu Shuanghui Power Development Co.", website: "#" }
+      ]
+    },
+    {
+      title: "MV & HV Surge Arresters",
+      companies: [
+        { name: "Jinguan Electric", website: "https://www.jinguanelectric.com/" }
+      ]
     }
   ];
 
@@ -35,7 +53,7 @@ const Partners = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {supplierCategories.map((category, index) => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
               <h3 className="text-xl font-semibold text-primary mb-4 text-center">
