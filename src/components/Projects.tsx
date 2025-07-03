@@ -15,11 +15,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="customers" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Featured Projects
+            Our Customers
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Delivering critical infrastructure solutions across Israel

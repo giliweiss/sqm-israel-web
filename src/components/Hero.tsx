@@ -26,20 +26,13 @@ const Hero = () => {
         <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-medium opacity-90">
           Since 1990, SQM Israel Ltd keeps Israel's grid—and its industries—running safely and efficiently.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex justify-center">
           <Button 
             size="lg" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg h-auto"
-            onClick={scrollToContact}
+            onClick={() => window.location.href = '/about'}
           >
-            Request Consultation
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg h-auto"
-          >
-            Download Company Profile
+            Read More
           </Button>
         </div>
       </div>
