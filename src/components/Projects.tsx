@@ -1,17 +1,15 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Nation-wide Underground Switching Stations",
-      description: "Complete underground switching station solutions for IDF campuses nationwide, featuring 22 kV infrastructure and advanced protection systems.",
-      category: "Defense Infrastructure"
-    },
-    {
-      title: "Independent Natural-Gas & Renewables IPP Consortiums",
-      description: "Strategic consortium partnerships for independent power producers across Israel, integrating natural gas and renewable energy sources.",
-      category: "Energy Integration"
-    }
+  const customers = [
+    "Israel Electric Corporation (IEC)",
+    "Ministry of Defense",
+    "Israel Defense Forces (IDF)", 
+    "Mekorot Water Company",
+    "Dead Sea Works",
+    "Israel Chemicals Ltd (ICL)",
+    "Teva Pharmaceutical Industries",
+    "Intel Israel"
   ];
 
   return (
@@ -26,23 +24,18 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader>
-                <div className="text-sm font-semibold text-accent mb-2">
-                  {project.category}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center max-w-6xl mx-auto">
+          {customers.map((customer, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-24 flex items-center justify-center"
+            >
+              <div className="text-center">
+                <div className="font-semibold text-primary text-sm">
+                  {customer}
                 </div>
-                <CardTitle className="text-xl font-semibold text-primary">
-                  {project.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base text-muted-foreground leading-relaxed">
-                  {project.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
