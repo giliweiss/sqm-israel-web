@@ -1,0 +1,52 @@
+const Footer = () => {
+  const navLinks = [
+    { href: "#expertise", label: "Expertise" },
+    { href: "#partners", label: "Partners" },
+    { href: "#contact", label: "Contact" },
+  ];
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <footer className="bg-primary text-primary-foreground py-12">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          {/* Copyright */}
+          <div className="text-center md:text-left">
+            <p className="text-sm opacity-90">
+              © 2025 SQM Israel Ltd. All rights reserved.
+            </p>
+          </div>
+          
+          {/* Footer Navigation */}
+          <nav className="flex space-x-6">
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => scrollToSection(link.href)}
+                className="text-sm opacity-90 hover:opacity-100 transition-opacity"
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+        
+        {/* Company Info */}
+        <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center">
+          <div className="text-sm opacity-75 max-w-2xl mx-auto">
+            SQM Israel Ltd - Leading provider of power quality, energy storage, and grid protection solutions since 1990.
+            Serving utility and industrial customers across Israel with reliable, engineered solutions.
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
