@@ -5,18 +5,18 @@ import type { CarouselApi } from "@/components/ui/carousel";
 
 const Projects = () => {
   const customers = [
-    { name: "JEDCO", logo: "/src/assets/customersLogos/jedco.jpg", largeSize: true, url: "https://www.jedco.org/" },
-    { name: "Israel Defense Forces (IDF)", logo: "/src/assets/customersLogos/idf.png", largeSize: true, url: "https://www.idf.il/en/" },
-    { name: "ORMAT Technologies", logo: "/src/assets/customersLogos/ormat.png", largeSize: false, url: "https://www.ormat.com/en/home/a/main/" },
-    { name: "Tower Semiconductor", logo: "/src/assets/customersLogos/tower.png", largeSize: false, url: "https://towersemi.com/" },
-    { name: "SHEBA Medical Center", logo: "/src/assets/customersLogos/sheba.png", largeSize: false, url: "https://www.shebaonline.org/" },
-    { name: "InterPlus Energy", logo: "/src/assets/customersLogos/inter-plus.png", largeSize: true, url: "https://www.interplus.co.il/en/home" },
-    { name: "Israel Chemicals Ltd (ICL)", logo: "/src/assets/customersLogos/icl.png", largeSize: false, url: "https://www.icl-group.com/" },
-    { name: "ELECTRA ELCO C&S", logo: "/src/assets/customersLogos/electra-elco.png", largeSize: false, url: "https://www.electra-elco-cs.co.il/en" },
-    { name: "Afcon Holdings", logo: "/src/assets/customersLogos/afcon.png", largeSize: false, url: "https://www.afcon.co.il/" },
-    { name: "VRT", logo: "/src/assets/customersLogos/vrt.png", largeSize: true, url: "https://www.vrtpower.com/en" },
-    { name: "Kibbutz Cabri", logo: "/src/assets/customersLogos/kibutz-cabri.jpg", largeSize: false, url: "https://www.cabri.org.il/english/" },
-    { name: "Israel Electric Corporation (IEC)", logo: "/src/assets/customersLogos/israel-electric.png", largeSize: false, url: "https://www.iec.co.il/en/home" }
+    { name: "JEDCO", logo: "/src/assets/customers-logos/jedco.jpg", largeSize: true, url: "https://www.jedco.org/" },
+    { name: "Israel Defense Forces (IDF)", logo: "/src/assets/customers-logos/idf.png", largeSize: true, url: "https://www.idf.il/en/" },
+    { name: "ORMAT Technologies", logo: "/src/assets/customers-logos/ormat.png", largeSize: false, url: "https://www.ormat.com/en/home/a/main/" },
+    { name: "Tower Semiconductor", logo: "/src/assets/customers-logos/tower.png", largeSize: false, url: "https://towersemi.com/" },
+    { name: "SHEBA Medical Center", logo: "/src/assets/customers-logos/sheba.png", largeSize: false, url: "https://www.shebaonline.org/" },
+    { name: "InterPlus Energy", logo: "/src/assets/customers-logos/inter-plus.png", largeSize: true, url: "https://www.interplus.co.il/en/home" },
+    { name: "Israel Chemicals Ltd (ICL)", logo: "/src/assets/customers-logos/icl.png", largeSize: false, url: "https://www.icl-group.com/" },
+    { name: "ELECTRA ELCO C&S", logo: "/src/assets/customers-logos/electra-elco.png", largeSize: false, url: "https://www.electra-elco-cs.co.il/en" },
+    { name: "Afcon Holdings", logo: "/src/assets/customers-logos/afcon.png", largeSize: false, url: "https://www.afcon.co.il/" },
+    { name: "VRT", logo: "/src/assets/customers-logos/vrt.png", largeSize: true, url: "https://www.vrtpower.com/en" },
+    { name: "Kibbutz Cabri", logo: "/src/assets/customers-logos/kibutz-cabri.jpg", largeSize: false, url: "https://www.cabri.org.il/english/" },
+    { name: "Israel Electric Corporation (IEC)", logo: "/src/assets/customers-logos/israel-electric.png", largeSize: false, url: "https://www.iec.co.il/en/home" }
   ];
 
   const [api, setApi] = useState<CarouselApi>();
