@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import powerEnergyImage from '@/assets/expertise-images/power-energy.png';
 import switchingProtectionImage from '@/assets/expertise-images/switching-protection.png';
 import engineeringProjectImage from '@/assets/expertise-images/engineering-project.png';
+import expertiseBackground from '@/assets/expertise-background.jpg';
 
 const Expertise = () => {
   const expertiseAreas = [
@@ -25,8 +26,17 @@ const Expertise = () => {
   ];
 
   return (
-    <section id="expertise" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section 
+      id="expertise" 
+      className="py-20 relative overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(hsla(0, 0%, 100%, 0.95), hsla(0, 0%, 100%, 0.95)), url(${expertiseBackground})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our Expertise
