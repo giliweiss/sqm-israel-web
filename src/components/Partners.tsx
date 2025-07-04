@@ -1,5 +1,14 @@
 import { useState, useEffect } from 'react';
 
+// Import all supplier logos
+import iljinElectricLogo from '@/assets/suppliers-logos/iljin-electric.png';
+import taiguangLogo from '@/assets/suppliers-logos/taiguang-electrical-equipment-factory.png';
+import kLineLogo from '@/assets/suppliers-logos/k-line.png';
+import jinguanLogo from '@/assets/suppliers-logos/jinguan-logo_70h.png';
+import sandcElectricLogo from '@/assets/suppliers-logos/s-and-c-electric.png';
+import hitzingerLogo from '@/assets/suppliers-logos/hitzinger.png';
+import jiangsuPowerLogo from '@/assets/suppliers-logos/jiangsu-power-supply.png';
+
 const Partners = () => {
   const [currentSlides, setCurrentSlides] = useState<{[key: number]: number}>({});
   const [isHovered, setIsHovered] = useState<{[key: number]: boolean}>({});
@@ -63,7 +72,7 @@ const Partners = () => {
           name: "Iljin Electric", 
           website: "http://www.iljinelectric.com/eng/main.jsp",
           description: "Leading HV cable manufacturer",
-          logo: "/src/assets/suppliers-logos/iljin-electric.png"
+          logo: iljinElectricLogo
         }
       ]
     },
@@ -76,19 +85,19 @@ const Partners = () => {
           name: "Taiguang Electrical Equipment Factory", 
           website: "http://www.taiguang.com/",
           description: "Composite insulator specialist",
-          logo: "/src/assets/suppliers-logos/taiguang-electrical-equipment-factory.png"
+          logo: taiguangLogo
         },
         { 
           name: "K-Line", 
           website: "https://www.k-line.net/",
           description: "Polymer insulation solutions",
-          logo: "/src/assets/suppliers-logos/k-line.png"
+          logo: kLineLogo
         },
         { 
           name: "Jinguan Electric", 
           website: "https://www.jinguanelectric.com/products/composite-insulator/",
           description: "Advanced composite materials",
-          logo: "/src/assets/suppliers-logos/jinguan-logo_70h.png"
+          logo: jinguanLogo
         }
       ]
     },
@@ -101,13 +110,13 @@ const Partners = () => {
           name: "S&C Electric Co", 
           website: "http://www.sandc.com/",
           description: "Grid protection & automation",
-          logo: "/src/assets/suppliers-logos/s-and-c-electric.png"
+          logo: sandcElectricLogo
         },
         { 
           name: "Hitzinger", 
           website: "http://www.hitzinger.at/en",
           description: "High-voltage test systems",
-          logo: "/src/assets/suppliers-logos/hitzinger.png"
+          logo: hitzingerLogo
         }
       ]
     },
@@ -120,7 +129,7 @@ const Partners = () => {
           name: "S&C Electric Co", 
           website: "http://www.sandc.com/",
           description: "Grid-scale energy storage",
-          logo: "/src/assets/suppliers-logos/s-and-c-electric.png"
+          logo: sandcElectricLogo
         }
       ]
     },
@@ -133,7 +142,7 @@ const Partners = () => {
           name: "Jiangsu Shuanghui Power Development Co.", 
           website: "http://www.jsshdl.com/",
           description: "Transmission & Distribution hardware solutions",
-          logo: "/src/assets/suppliers-logos/jiangsu-power-supply.png"
+          logo: jiangsuPowerLogo
         }
       ]
     },
@@ -146,7 +155,7 @@ const Partners = () => {
           name: "Jinguan Electric", 
           website: "https://www.jinguanelectric.com/",
           description: "MV & HV surge protection technology",
-          logo: "/src/assets/suppliers-logos/jinguan-logo_70h.png"
+          logo: jinguanLogo
         }
       ]
     }
@@ -176,8 +185,8 @@ const Partners = () => {
               <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
                 <div className="flex items-center justify-between min-h-[100px]">
                   <div className="flex-1">
-                    <div className="text-3xl mb-2">{category.icon}</div>
                     <h3 className="text-xl font-bold mb-1 leading-tight min-h-[50px] flex items-center whitespace-pre-line">
+                      <span className="text-3xl mr-3">{category.icon}</span>
                       {category.title}
                     </h3>
                     <div className="text-sm opacity-90">
@@ -301,30 +310,6 @@ const Partners = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Summary Stats */}
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-xl p-8 shadow-lg max-w-4xl mx-auto border border-gray-200">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2">
-                  {supplierCategories.length}
-                </div>
-                <div className="text-sm text-muted-foreground">Categories</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2">
-                  {Array.from(new Set(supplierCategories.flatMap(category => category.companies.map(company => company.name)))).length}
-                </div>
-                <div className="text-sm text-muted-foreground">Partners</div>
-              </div>
-              <div className="col-span-2 md:col-span-1">
-                <div className="text-3xl font-bold text-primary mb-2">30+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
