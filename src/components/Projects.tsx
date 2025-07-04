@@ -2,14 +2,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const Projects = () => {
   const customers = [
-    "Israel Electric Corporation (IEC)",
-    "Ministry of Defense",
-    "Israel Defense Forces (IDF)", 
-    "Mekorot Water Company",
-    "Dead Sea Works",
+    "JEDCO",
+    "Israel Defense Forces (IDF)",
+    "ORMAT Technologies",
+    "Tower Semiconductor",
+    "SHEBA Medical Center",
+    "InterPlus Energy",
     "Israel Chemicals Ltd (ICL)",
-    "Teva Pharmaceutical Industries",
-    "Intel Israel"
+    "ELECTRA ELCO C&S",
+    "Afcon Holdings",
+    "VRT",
+    "Kibbutz Cabri",
+    "Israel Electric Corporation (IEC)"
   ];
 
   return (
@@ -24,14 +28,14 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">
           {customers.map((customer, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-24 flex items-center justify-center"
+              className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300 h-20 flex items-center justify-center"
             >
               <div className="text-center">
-                <div className="font-semibold text-primary text-sm">
+                <div className="font-semibold text-primary text-xs">
                   {customer}
                 </div>
               </div>
