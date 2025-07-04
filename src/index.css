@@ -112,3 +112,40 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Smooth scrolling animation for customer carousel */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Enhanced carousel smooth transitions */
+.carousel-smooth {
+  scroll-behavior: smooth;
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-smooth .embla__slide {
+  transition: all 0.4s ease-in-out;
+}
+
+.carousel-smooth .embla__container {
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hide scrollbar */
+.scroll-smooth::-webkit-scrollbar {
+  display: none;
+}
