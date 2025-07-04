@@ -1,22 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import aboutBackground from "@/assets/about-background.jpg";
 
 const About = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main className="pt-16">
-        <section 
-          className="py-20 relative overflow-hidden"
-          style={{
-            backgroundImage: `linear-gradient(hsla(0, 0%, 100%, 0.92), hsla(0, 0%, 100%, 0.92)), url(${aboutBackground})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat"
-          }}
-        >
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-8 text-center">
                 About SQM Israel Ltd

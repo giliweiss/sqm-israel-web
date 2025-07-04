@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import partnersBackground from "@/assets/partners-background.jpg";
 
 // Import all supplier logos
 import iljinElectricLogo from '@/assets/suppliers-logos/iljin-electric.png';
@@ -163,17 +162,8 @@ const Partners = () => {
   ];
 
   return (
-    <section 
-      id="suppliers" 
-      className="py-20 relative overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(hsla(214, 100%, 33%, 0.1), hsla(214, 100%, 33%, 0.1)), url(${partnersBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
-    >
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="suppliers" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our Global Suppliers
