@@ -1,21 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
+// Import expertise images
+import powerEnergyImage from '@/assets/expertise-images/power-energy.png';
+import switchingProtectionImage from '@/assets/expertise-images/switching-protection.png';
+import engineeringProjectImage from '@/assets/expertise-images/engineering-project.png';
+
 const Expertise = () => {
   const expertiseAreas = [
     {
       title: "Power Quality & Energy Storage",
       description: "UPS, battery & hybrid solutions for reliable power delivery and grid stability.",
-      icon: "⚡"
+      image: powerEnergyImage
     },
     {
       title: "Switching & Protection",
       description: "HV switching (22 kV-400 kV), surge arresters, underground switch-gear for comprehensive grid protection.",
-      icon: "🔌"
+      image: switchingProtectionImage
     },
     {
       title: "Engineering & Project Management",
       description: "Tender support, consortium building, 24/7 field service for complete project lifecycle management.",
-      icon: "🔧"
+      image: engineeringProjectImage
     }
   ];
 
@@ -35,7 +40,13 @@ const Expertise = () => {
           {expertiseAreas.map((area, index) => (
             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="text-center pb-4">
-                <div className="text-4xl mb-4">{area.icon}</div>
+                <div className="flex justify-center mb-4">
+                  <img 
+                    src={area.image} 
+                    alt={`${area.title} icon`}
+                    className="w-25 h-25 object-contain"
+                  />
+                </div>
                 <CardTitle className="text-xl font-semibold text-primary">
                   {area.title}
                 </CardTitle>
