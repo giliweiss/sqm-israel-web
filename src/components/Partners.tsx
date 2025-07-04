@@ -62,7 +62,8 @@ const Partners = () => {
         { 
           name: "Iljin Electric", 
           website: "http://www.iljinelectric.com/eng/main.jsp",
-          description: "Leading HV cable manufacturer"
+          description: "Leading HV cable manufacturer",
+          logo: "/src/assets/suppliers-logos/iljin-electric.png"
         }
       ]
     },
@@ -74,17 +75,20 @@ const Partners = () => {
         { 
           name: "Taiguang Electrical Equipment Factory", 
           website: "http://www.taiguang.com/",
-          description: "Composite insulator specialist"
+          description: "Composite insulator specialist",
+          logo: "/src/assets/suppliers-logos/taiguang-electrical-equipment-factory.png"
         },
         { 
           name: "K-Line", 
           website: "https://www.k-line.net/",
-          description: "Polymer insulation solutions"
+          description: "Polymer insulation solutions",
+          logo: "/src/assets/suppliers-logos/k-line.png"
         },
         { 
           name: "Jinguan Electric", 
           website: "https://www.jinguanelectric.com/products/composite-insulator/",
-          description: "Advanced composite materials"
+          description: "Advanced composite materials",
+          logo: "/src/assets/suppliers-logos/jinguan-logo_70h.png"
         }
       ]
     },
@@ -96,12 +100,14 @@ const Partners = () => {
         { 
           name: "S&C Electric Co", 
           website: "http://www.sandc.com/",
-          description: "Grid protection & automation"
+          description: "Grid protection & automation",
+          logo: "/src/assets/suppliers-logos/s-and-c-electric.png"
         },
         { 
           name: "Hitzinger", 
           website: "http://www.hitzinger.at/en",
-          description: "High-voltage test systems"
+          description: "High-voltage test systems",
+          logo: "/src/assets/suppliers-logos/hitzinger.png"
         }
       ]
     },
@@ -113,7 +119,8 @@ const Partners = () => {
         { 
           name: "S&C Electric Co", 
           website: "http://www.sandc.com/",
-          description: "Grid-scale energy storage"
+          description: "Grid-scale energy storage",
+          logo: "/src/assets/suppliers-logos/s-and-c-electric.png"
         }
       ]
     },
@@ -124,8 +131,9 @@ const Partners = () => {
       companies: [
         { 
           name: "Jiangsu Shuanghui Power Development Co.", 
-          website: "https://www.jsshuanghui.com/",
-          description: "Transmission & Distribution hardware solutions"
+          website: "http://www.jsshdl.com/",
+          description: "Transmission & Distribution hardware solutions",
+          logo: "/src/assets/suppliers-logos/jiangsu-power-supply.png"
         }
       ]
     },
@@ -137,7 +145,8 @@ const Partners = () => {
         { 
           name: "Jinguan Electric", 
           website: "https://www.jinguanelectric.com/",
-          description: "MV & HV surge protection technology"
+          description: "MV & HV surge protection technology",
+          logo: "/src/assets/suppliers-logos/jinguan-logo_70h.png"
         }
       ]
     }
@@ -201,29 +210,45 @@ const Partners = () => {
                           key={companyIndex} 
                           className="w-full flex-shrink-0"
                         >
-                          <div className="border border-gray-100 rounded-lg p-4 hover:border-gray-300 transition-colors duration-200 hover:shadow-sm min-h-[140px] flex flex-col justify-between bg-gradient-to-br from-white to-gray-50">
-                            <div className="mb-3">
-                              <h4 className="font-semibold text-foreground text-base mb-2 overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
-                                {company.name}
-                              </h4>
-                              <p className="text-sm text-muted-foreground overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
-                                {company.description}
-                              </p>
+                          <div className="border border-gray-100 rounded-lg p-3 hover:border-gray-300 transition-colors duration-200 hover:shadow-sm min-h-[240px] flex flex-col bg-gradient-to-br from-white to-gray-50 group/card">
+                            {/* Large Company Logo - Takes up most of the card */}
+                            <div className="flex justify-center items-center flex-1 mb-3">
+                              <div className="w-full h-40 flex items-center justify-center bg-white rounded-lg border border-gray-100 shadow-sm p-6 group-hover/card:shadow-md transition-shadow duration-200">
+                                <img 
+                                  src={company.logo} 
+                                  alt={`${company.name} logo`}
+                                  className="max-w-full max-h-full object-contain hover:scale-110 transition-transform duration-300"
+                                  onError={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.style.display = 'none';
+                                  }}
+                                />
+                              </div>
                             </div>
                             
-                            {company.website !== "#" && company.website !== "https://www.jsshuanghui.com/" && (
-                              <a 
-                                href={company.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium mt-auto group/link"
+                            {/* Minimal Company Info - Just essentials */}
+                            <div className="text-center space-y-2">
+                              <h4 
+                                className="font-semibold text-foreground text-sm leading-tight"
+                                title={company.description}
                               >
-                                <span>Visit Website</span>
-                                <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                              </a>
-                            )}
+                                {company.name}
+                              </h4>
+                              
+                              {company.website !== "#" && company.website !== "https://www.jsshuanghui.com/" && (
+                                <a 
+                                  href={company.website}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium group/link bg-blue-50 hover:bg-blue-100 px-2 py-1 rounded-full"
+                                >
+                                  <span>Visit Website</span>
+                                  <svg className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                  </svg>
+                                </a>
+                              )}
+                            </div>
                           </div>
                         </div>
                       ))}
@@ -290,7 +315,7 @@ const Partners = () => {
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">
-                  {supplierCategories.reduce((total, cat) => total + cat.companies.length, 0)}
+                  {Array.from(new Set(supplierCategories.flatMap(category => category.companies.map(company => company.name)))).length}
                 </div>
                 <div className="text-sm text-muted-foreground">Partners</div>
               </div>
