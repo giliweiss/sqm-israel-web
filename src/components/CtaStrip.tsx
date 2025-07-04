@@ -16,7 +16,7 @@ const CtaStrip = () => {
         backgroundImage: `linear-gradient(hsla(214, 100%, 33%, 0.7), hsla(214, 100%, 33%, 0.7)), url(${ctaBackground})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundRepeat: "no-repeat"
       }}
     >
       <div className="container mx-auto px-4 text-center text-white relative z-10">

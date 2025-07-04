@@ -16,7 +16,7 @@ const Hero = () => {
         backgroundImage: `linear-gradient(hsla(214, 100%, 33%, 0.6), hsla(214, 100%, 33%, 0.6)), url(${heroBackground})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundRepeat: "no-repeat"
       }}
     >
       <div className="container mx-auto px-4 text-center text-white z-10">
