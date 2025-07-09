@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Create mailto link
-    const subject = encodeURIComponent("Consultation Request - SQM Israel Ltd");
+    const subject = encodeURIComponent("Consultation Request - SQM Israel (2001) Ltd");
     const body = encodeURIComponent(`
 Name: ${formData.name}
 Email: ${formData.email}

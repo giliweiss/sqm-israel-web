@@ -52,11 +52,11 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start space-y-2">
             <img 
               src={sqmLogo} 
-              alt="SQM Israel Ltd" 
+              alt="SQM Israel (2001) Ltd" 
               className="h-8 w-auto filter brightness-0 invert"
             />
             <p className="text-sm opacity-90">
-              © 2025 SQM Israel Ltd. All rights reserved.
+              © 2025 SQM Israel (2001) Ltd. All rights reserved.
             </p>
           </div>
           
@@ -77,7 +77,7 @@ const Footer = () => {
         {/* Company Info */}
         <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center">
           <div className="text-sm opacity-75 max-w-2xl mx-auto">
-            SQM Israel Ltd - Leading provider of power quality, energy storage, and grid protection solutions since 1990.
+            SQM Israel (2001) Ltd - Leading provider of power quality, energy storage, and grid protection solutions since 1990.
             Serving utility and industrial customers across Israel with reliable, engineered solutions.
           </div>
         </div>

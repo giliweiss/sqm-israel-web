@@ -24,7 +24,7 @@ const Hero = () => {
           Reliable Power Quality, Energy Storage & Grid Protection
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-medium opacity-90">
-          Since 1990, SQM Israel Ltd keeps Israel's grid—and its industries—running safely and efficiently.
+          Since 1990, SQM Israel (2001) Ltd keeps Israel's grid—and its industries—running safely and efficiently.
         </p>
         <div className="flex justify-center">
           <Button 

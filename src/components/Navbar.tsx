@@ -61,7 +61,7 @@ const Navbar = () => {
           >
             <img 
               src={sqmLogo} 
-              alt="SQM Israel Ltd" 
+              alt="SQM Israel (2001) Ltd" 
               className="h-16 w-auto"
             />
           </Link>
