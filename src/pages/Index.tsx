@@ -8,7 +8,6 @@ import Projects from "@/components/Projects";
 import CtaStrip from "@/components/CtaStrip";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   useEffect(() => {
@@ -31,7 +30,6 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };
