@@ -2,11 +2,9 @@ import { Button } from "@/components/ui/button";
 import ctaBackground from "@/assets/cta-background.jpg";
 
 const CtaStrip = () => {
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const openWhatsApp = () => {
+    const phoneNumber = "972507240010";
+    window.open(`https://wa.me/${phoneNumber}`, "_blank");
   };
 
   return (
@@ -29,7 +27,7 @@ const CtaStrip = () => {
         <Button 
           size="lg" 
           className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg h-auto"
-          onClick={scrollToContact}
+          onClick={openWhatsApp}
         >
           Speak with our engineers
         </Button>
