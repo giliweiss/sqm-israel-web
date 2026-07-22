@@ -77,7 +77,7 @@ const Partners = () => {
         },
         { 
           name: "TBEA Shandong Luneng Taishan Cable Co.,Ltd.", 
-          website: "https://en.tbea.com/",
+          website: "https://en.tbea.com/product_list/61.html",
           description: "HV & UHV cable manufacturer",
           logo: tbeaLogo
         }
