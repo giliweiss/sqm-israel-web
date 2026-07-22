@@ -3,8 +3,7 @@ import ctaBackground from "@/assets/cta-background.jpg";
 
 const CtaStrip = () => {
   const openWhatsApp = () => {
-    const phoneNumber = "972507240010";
-    window.open(`https://wa.me/${phoneNumber}`, "_blank");
+    window.open("https://chat.whatsapp.com/0O8wR061Di9Dba7mBqfHwx", "_blank");
   };
 
   return (

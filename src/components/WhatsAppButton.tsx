@@ -2,10 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    // Format: +972 50-724-0010 becomes 972507240010
-    const phoneNumber = "972507240010";
-    const whatsappUrl = `https://wa.me/${phoneNumber}`;
-    window.open(whatsappUrl, "_blank");
+    window.open("https://chat.whatsapp.com/0O8wR061Di9Dba7mBqfHwx", "_blank");
   };
 
   return (

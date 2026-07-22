@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 // Import all supplier logos
 import iljinElectricLogo from '@/assets/suppliers-logos/iljin-electric.png';
+import tbeaLogo from '@/assets/suppliers-logos/tbea.png';
 import taiguangLogo from '@/assets/suppliers-logos/taiguang-electrical-equipment-factory.png';
 import kLineLogo from '@/assets/suppliers-logos/k-line.png';
 import jinguanLogo from '@/assets/suppliers-logos/jinguan-logo_70h.png';
@@ -73,6 +74,12 @@ const Partners = () => {
           website: "http://www.iljinelectric.com/eng/main.jsp",
           description: "Leading HV cable manufacturer",
           logo: iljinElectricLogo
+        },
+        { 
+          name: "TBEA Shandong Luneng Taishan Cable Co.,Ltd.", 
+          website: "https://en.tbea.com/",
+          description: "HV & UHV cable manufacturer",
+          logo: tbeaLogo
         }
       ]
     },

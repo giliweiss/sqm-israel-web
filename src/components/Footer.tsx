@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import sqmLogo from "@/assets/SQM-logos/SQM-logo-no-bg-smaller.png";
+import SqmLogo from "@/components/SqmLogo";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -50,11 +50,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Logo and Copyright */}
           <div className="flex flex-col items-center md:items-start space-y-2">
-            <img 
-              src={sqmLogo} 
-              alt="SQM Israel (2001) Ltd" 
-              className="h-8 w-auto filter brightness-0 invert"
-            />
+            <SqmLogo variant="inverted" iconClassName="h-9 w-9" />
             <p className="text-sm opacity-90">
               © 2025 SQM Israel (2001) Ltd. All rights reserved.
             </p>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import sqmLogo from "@/assets/SQM-logos/SQM-logo-no-bg-smaller.png";
+import SqmLogo from "@/components/SqmLogo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,11 +59,7 @@ const Navbar = () => {
             to="/" 
             className="flex items-center hover:opacity-80 transition-opacity"
           >
-            <img 
-              src={sqmLogo} 
-              alt="SQM Israel (2001) Ltd" 
-              className="h-16 w-auto"
-            />
+            <SqmLogo />
           </Link>
 
           {/* Desktop Navigation */}

@@ -16,6 +16,8 @@ import afconLogo from '@/assets/customers-logos/afcon.png';
 import vrtLogo from '@/assets/customers-logos/vrt.png';
 import kibutzCabriLogo from '@/assets/customers-logos/kibutz-cabri.jpg';
 import israelElectricLogo from '@/assets/customers-logos/israel-electric.png';
+import elMorRenewableEnergyLogo from '@/assets/customers-logos/el-mor-renewable-energy.png';
+import armushHaniLogo from '@/assets/customers-logos/armush-hani.png';
 
 const Projects = () => {
   const customers = [
@@ -30,7 +32,9 @@ const Projects = () => {
     { name: "Afcon Holdings", logo: afconLogo, largeSize: false, url: "https://www.afcon.co.il/" },
     { name: "VRT", logo: vrtLogo, largeSize: true, url: "https://www.vrtpower.com/en" },
     { name: "Kibbutz Cabri", logo: kibutzCabriLogo, largeSize: false, url: "https://www.cabri.org.il/english/" },
-    { name: "Israel Electric Corporation (IEC)", logo: israelElectricLogo, largeSize: false, url: "https://www.iec.co.il/en/home" }
+    { name: "Israel Electric Corporation (IEC)", logo: israelElectricLogo, largeSize: false, url: "https://www.iec.co.il/en/home" },
+    { name: "EL-MOR Renewable Energy", logo: elMorRenewableEnergyLogo, largeSize: true, url: "https://el-mor-re.com/en/" },
+    { name: "Armush Hani Services & Installations", logo: armushHaniLogo, largeSize: true, url: "https://www.linkedin.com/company/armush-hani" }
   ];
 
   const [api, setApi] = useState<CarouselApi>();
